@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A91823E2B69484B00220A79 /* SwiftLintFramework in Frameworks */ = {isa = PBXBuildFile; productRef = 2A91823D2B69484B00220A79 /* SwiftLintFramework */; };
+		2A9182402B69484B00220A79 /* swiftlint in Frameworks */ = {isa = PBXBuildFile; productRef = 2A91823F2B69484B00220A79 /* swiftlint */; };
 		2ADB28F02B691752005368CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADB28EF2B691752005368CD /* AppDelegate.swift */; };
 		2ADB28F22B691752005368CD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADB28F12B691752005368CD /* SceneDelegate.swift */; };
 		2ADB28F42B691752005368CD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADB28F32B691752005368CD /* ViewController.swift */; };
@@ -31,6 +33,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A91823E2B69484B00220A79 /* SwiftLintFramework in Frameworks */,
+				2A9182402B69484B00220A79 /* swiftlint in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,12 +81,19 @@
 				2ADB28E82B691752005368CD /* Sources */,
 				2ADB28E92B691752005368CD /* Frameworks */,
 				2ADB28EA2B691752005368CD /* Resources */,
+				2A9182432B694FC600220A79 /* ShellScript */,
+				2A9182442B694FCE00220A79 /* ShellScript */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				2A9182422B694A6E00220A79 /* PBXTargetDependency */,
 			);
 			name = Project2;
+			packageProductDependencies = (
+				2A91823D2B69484B00220A79 /* SwiftLintFramework */,
+				2A91823F2B69484B00220A79 /* swiftlint */,
+			);
 			productName = Project2;
 			productReference = 2ADB28EC2B691752005368CD /* Project2.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +122,9 @@
 				Base,
 			);
 			mainGroup = 2ADB28E32B691752005368CD;
+			packageReferences = (
+				2A91823C2B69484B00220A79 /* XCRemoteSwiftPackageReference "SwiftLint" */,
+			);
 			productRefGroup = 2ADB28ED2B691752005368CD /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -133,6 +147,43 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2A9182432B694FC600220A79 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n";
+		};
+		2A9182442B694FCE00220A79 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2ADB28E82B691752005368CD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -145,6 +196,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2A9182422B694A6E00220A79 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = 2A9182412B694A6E00220A79 /* SwiftLintPlugin */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		2ADB28F52B691752005368CD /* Main.storyboard */ = {
@@ -361,6 +419,35 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2A91823C2B69484B00220A79 /* XCRemoteSwiftPackageReference "SwiftLint" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/SwiftLint.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.54.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2A91823D2B69484B00220A79 /* SwiftLintFramework */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2A91823C2B69484B00220A79 /* XCRemoteSwiftPackageReference "SwiftLint" */;
+			productName = SwiftLintFramework;
+		};
+		2A91823F2B69484B00220A79 /* swiftlint */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2A91823C2B69484B00220A79 /* XCRemoteSwiftPackageReference "SwiftLint" */;
+			productName = swiftlint;
+		};
+		2A9182412B694A6E00220A79 /* SwiftLintPlugin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2A91823C2B69484B00220A79 /* XCRemoteSwiftPackageReference "SwiftLint" */;
+			productName = "plugin:SwiftLintPlugin";
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2ADB28E42B691752005368CD /* Project object */;
 }
