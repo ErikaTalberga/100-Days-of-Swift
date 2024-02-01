@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  Project1
+//  Project3
 //
 //  Created by erika.talberga on 29/01/2024.
 //
@@ -9,8 +9,6 @@ import UIKit
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
-
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -33,4 +31,3 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
 }
-

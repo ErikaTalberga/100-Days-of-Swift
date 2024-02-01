@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2A8223472B696A2600EFC55C /* SwiftLintFramework in Frameworks */ = {isa = PBXBuildFile; productRef = 2A8223462B696A2600EFC55C /* SwiftLintFramework */; };
-		2A8223492B696A2600EFC55C /* swiftlint in Frameworks */ = {isa = PBXBuildFile; productRef = 2A8223482B696A2600EFC55C /* swiftlint */; };
 		2A9E714C2B680DE000666E3C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9E714B2B680DE000666E3C /* AppDelegate.swift */; };
 		2A9E714E2B680DE000666E3C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9E714D2B680DE000666E3C /* SceneDelegate.swift */; };
 		2A9E71502B680DE000666E3C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9E714F2B680DE000666E3C /* ViewController.swift */; };
@@ -29,7 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2A9E71482B680DE000666E3C /* Project1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Project1.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A9E71482B680DE000666E3C /* Project3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Project3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A9E714B2B680DE000666E3C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2A9E714D2B680DE000666E3C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		2A9E714F2B680DE000666E3C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -55,8 +53,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2A8223472B696A2600EFC55C /* SwiftLintFramework in Frameworks */,
-				2A8223492B696A2600EFC55C /* swiftlint in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,7 +70,7 @@
 		2A9E71492B680DE000666E3C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2A9E71482B680DE000666E3C /* Project1.app */,
+				2A9E71482B680DE000666E3C /* Project3.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -115,9 +111,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		2A9E71472B680DE000666E3C /* Project1 */ = {
+		2A9E71472B680DE000666E3C /* Project3 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2A9E715C2B680DE300666E3C /* Build configuration list for PBXNativeTarget "Project1" */;
+			buildConfigurationList = 2A9E715C2B680DE300666E3C /* Build configuration list for PBXNativeTarget "Project3" */;
 			buildPhases = (
 				2A9E71442B680DE000666E3C /* Sources */,
 				2A9E71452B680DE000666E3C /* Frameworks */,
@@ -128,13 +124,11 @@
 			dependencies = (
 				2A82234B2B696D0200EFC55C /* PBXTargetDependency */,
 			);
-			name = Project1;
+			name = Project3;
 			packageProductDependencies = (
-				2A8223462B696A2600EFC55C /* SwiftLintFramework */,
-				2A8223482B696A2600EFC55C /* swiftlint */,
 			);
 			productName = Project1;
-			productReference = 2A9E71482B680DE000666E3C /* Project1.app */;
+			productReference = 2A9E71482B680DE000666E3C /* Project3.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -162,13 +156,12 @@
 			);
 			mainGroup = 2A9E713F2B680DE000666E3C;
 			packageReferences = (
-				2A8223452B696A2600EFC55C /* XCRemoteSwiftPackageReference "SwiftLint" */,
 			);
 			productRefGroup = 2A9E71492B680DE000666E3C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2A9E71472B680DE000666E3C /* Project1 */,
+				2A9E71472B680DE000666E3C /* Project3 */,
 			);
 		};
 /* End PBXProject section */
@@ -289,7 +282,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -346,7 +339,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -364,7 +357,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Project1/Info.plist;
+				INFOPLIST_FILE = Project3/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -391,7 +384,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Project1/Info.plist;
+				INFOPLIST_FILE = Project3/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -422,7 +415,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2A9E715C2B680DE300666E3C /* Build configuration list for PBXNativeTarget "Project1" */ = {
+		2A9E715C2B680DE300666E3C /* Build configuration list for PBXNativeTarget "Project3" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2A9E715D2B680DE300666E3C /* Debug */,
@@ -445,16 +438,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		2A8223462B696A2600EFC55C /* SwiftLintFramework */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 2A8223452B696A2600EFC55C /* XCRemoteSwiftPackageReference "SwiftLint" */;
-			productName = SwiftLintFramework;
-		};
-		2A8223482B696A2600EFC55C /* swiftlint */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 2A8223452B696A2600EFC55C /* XCRemoteSwiftPackageReference "SwiftLint" */;
-			productName = swiftlint;
-		};
 		2A82234A2B696D0200EFC55C /* SwiftLintPlugin */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 2A8223452B696A2600EFC55C /* XCRemoteSwiftPackageReference "SwiftLint" */;
