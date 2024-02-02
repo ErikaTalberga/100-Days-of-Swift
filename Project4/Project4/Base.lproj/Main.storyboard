@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Table Table View Controller-->
+        <!--Table View Controller-->
         <scene sceneID="vWK-hI-2d5">
             <objects>
-                <tableViewController id="Lsx-Qb-pLP" customClass="TableTableViewController" customModule="Project4" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="Lsx-Qb-pLP" customClass="TableViewController" customModule="Project4" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="B6y-cO-G14">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -25,7 +25,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="5dS-To-qXM" kind="show" id="U7q-pa-NZ8"/>
+                                    <segue destination="5dS-To-qXM" kind="show" identifier="ViewController" id="U7q-pa-NZ8"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -38,7 +38,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Euq-Zn-KLY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1935.2" y="-22.03898050974513"/>
+            <point key="canvasLocation" x="1697" y="-22"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="VSv-qP-Bv7">
@@ -55,7 +55,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eqm-W2-Y9m" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2735" y="-15"/>
+            <point key="canvasLocation" x="2396" y="-22"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="yEF-PA-iVd">

@@ -31,13 +31,18 @@ class TableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if let viewController = self.storyboard?.instantiateViewController(withIdentifier: "ViewController") as? ViewController {
-            viewController.selectedWebsite = websites[indexPath.row]
-            let selectedSite = websites[indexPath.row]
-            print("Selected website: \(selectedSite)")
-            self.navigationController?.pushViewController(viewController, animated: true)
+        guard let viewController = self.storyboard?.instantiateViewController(withIdentifier: "ViewController") as? ViewController else {
+            return
         }
+        
+        viewController.selectedWebsite = websites[indexPath.row]
+        self.navigationController?.pushViewController(viewController, animated: true)
     }
+    
+
+
+
+
 
 
     /*
