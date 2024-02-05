@@ -18,6 +18,9 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GYe-dq-Z5l">
                                 <rect key="frame" x="75.5" y="100" width="224" height="114"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="GYe-dq-Z5l" secondAttribute="height" multiplier="112:57" id="Fo2-oh-6k7"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="us"/>
                                 <connections>
@@ -26,6 +29,9 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yPP-D9-3AK">
                                 <rect key="frame" x="75.5" y="244" width="224" height="114"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="yPP-D9-3AK" secondAttribute="height" multiplier="112:57" id="ANX-Vc-09N"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="us"/>
                                 <connections>
@@ -34,6 +40,9 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GZp-GA-qh4">
                                 <rect key="frame" x="75.5" y="388" width="224" height="114"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="GZp-GA-qh4" secondAttribute="height" multiplier="112:57" id="YPF-tp-wf7"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="us"/>
                                 <connections>
@@ -45,11 +54,14 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="yPP-D9-3AK" firstAttribute="centerX" secondItem="GYe-dq-Z5l" secondAttribute="centerX" id="2nj-h3-ZdI"/>
+                            <constraint firstItem="yPP-D9-3AK" firstAttribute="height" secondItem="GYe-dq-Z5l" secondAttribute="height" id="2vm-II-vTT"/>
                             <constraint firstItem="GZp-GA-qh4" firstAttribute="centerX" secondItem="yPP-D9-3AK" secondAttribute="centerX" id="F3d-FL-bkT"/>
+                            <constraint firstItem="GZp-GA-qh4" firstAttribute="height" secondItem="yPP-D9-3AK" secondAttribute="height" id="NZA-VM-JzJ"/>
                             <constraint firstItem="GYe-dq-Z5l" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="36" id="Stk-xb-QUj"/>
                             <constraint firstItem="GZp-GA-qh4" firstAttribute="top" secondItem="yPP-D9-3AK" secondAttribute="bottom" constant="30" id="UCp-f7-Kg4"/>
                             <constraint firstItem="yPP-D9-3AK" firstAttribute="top" secondItem="GYe-dq-Z5l" secondAttribute="bottom" constant="30" id="YWy-gk-fjI"/>
                             <constraint firstItem="GYe-dq-Z5l" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="ml5-yn-sOF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="GZp-GA-qh4" secondAttribute="bottom" constant="20" id="raF-pW-DUX"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="BwX-2k-nDb"/>
