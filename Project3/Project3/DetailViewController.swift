@@ -12,17 +12,26 @@ class DetailViewController: UIViewController {
     var selectedImage: String?
     var selectedPictureNumber = 0
     var totalPictures = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = selectedImage
+        addShareButton()
+        loadImage()
+    }
+    
+    func addShareButton() {
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(shareTapped))
         navigationItem.largeTitleDisplayMode = .never
+    }
+    
+    func loadImage() {
         if let imageToLoad = selectedImage {
             title = "Picture \(selectedPictureNumber + 1) of \(totalPictures)"
             imageView.image = UIImage(named: imageToLoad)
         }
-        // Do any additional setup after loading the view.
     }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.hidesBarsOnTap = true

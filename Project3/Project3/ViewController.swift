@@ -14,6 +14,12 @@ class ViewController: UITableViewController {
         super.viewDidLoad()
         title = "Storm Viewer"
         navigationController?.navigationBar.prefersLargeTitles = true
+        addImage()
+        pictures.sort()
+        print(pictures)
+    }
+    
+    func addImage() {
         let fileManager = FileManager.default
         let path = Bundle.main.resourcePath!
         do {
@@ -26,8 +32,6 @@ class ViewController: UITableViewController {
         } catch {
             print("Error: \(error)")
         }
-        pictures.sort()
-        print(pictures)
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
