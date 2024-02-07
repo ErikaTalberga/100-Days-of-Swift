@@ -19,13 +19,14 @@ class DetailViewController: UIViewController {
         super.viewDidLoad()
         title = selectedImage
         navigationItem.largeTitleDisplayMode = .never
-        
+        loadImages()
+    }
+    
+    func loadImages() {
         if let imageToLoad = selectedImage {
             title = "Picture \(selectedPictureNumber + 1) of \(totalPictures)"
             imageView.image = UIImage(named: imageToLoad)
         }
-        
-        // Do any additional setup after loading the view.
     }
     
     override func viewWillAppear(_ animated: Bool) {

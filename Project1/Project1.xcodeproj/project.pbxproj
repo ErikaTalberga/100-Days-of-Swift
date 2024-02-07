@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2A8223472B696A2600EFC55C /* SwiftLintFramework in Frameworks */ = {isa = PBXBuildFile; productRef = 2A8223462B696A2600EFC55C /* SwiftLintFramework */; };
-		2A8223492B696A2600EFC55C /* swiftlint in Frameworks */ = {isa = PBXBuildFile; productRef = 2A8223482B696A2600EFC55C /* swiftlint */; };
 		2A9E714C2B680DE000666E3C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9E714B2B680DE000666E3C /* AppDelegate.swift */; };
 		2A9E714E2B680DE000666E3C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9E714D2B680DE000666E3C /* SceneDelegate.swift */; };
 		2A9E71502B680DE000666E3C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9E714F2B680DE000666E3C /* ViewController.swift */; };
@@ -55,8 +53,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2A8223472B696A2600EFC55C /* SwiftLintFramework in Frameworks */,
-				2A8223492B696A2600EFC55C /* swiftlint in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -130,8 +126,6 @@
 			);
 			name = Project1;
 			packageProductDependencies = (
-				2A8223462B696A2600EFC55C /* SwiftLintFramework */,
-				2A8223482B696A2600EFC55C /* swiftlint */,
 			);
 			productName = Project1;
 			productReference = 2A9E71482B680DE000666E3C /* Project1.app */;
@@ -162,7 +156,6 @@
 			);
 			mainGroup = 2A9E713F2B680DE000666E3C;
 			packageReferences = (
-				2A8223452B696A2600EFC55C /* XCRemoteSwiftPackageReference "SwiftLint" */,
 			);
 			productRefGroup = 2A9E71492B680DE000666E3C /* Products */;
 			projectDirPath = "";
@@ -445,16 +438,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		2A8223462B696A2600EFC55C /* SwiftLintFramework */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 2A8223452B696A2600EFC55C /* XCRemoteSwiftPackageReference "SwiftLint" */;
-			productName = SwiftLintFramework;
-		};
-		2A8223482B696A2600EFC55C /* swiftlint */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 2A8223452B696A2600EFC55C /* XCRemoteSwiftPackageReference "SwiftLint" */;
-			productName = swiftlint;
-		};
 		2A82234A2B696D0200EFC55C /* SwiftLintPlugin */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 2A8223452B696A2600EFC55C /* XCRemoteSwiftPackageReference "SwiftLint" */;
