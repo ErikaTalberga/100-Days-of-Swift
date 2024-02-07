@@ -20,9 +20,17 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Guess the flag!"
-        let showScoreButton = UIBarButtonItem(title: "Show score", style: .plain, target: self, action: #selector(showAlert))
-        navigationItem.rightBarButtonItem = showScoreButton
+        addCountries()
+        setupButtons()
+        addScoreButton()
+        askQuestion(action: nil)
+    }
+    
+    func addCountries() {
         countries += ["estonia", "france", "germany", "ireland", "italy", "monaco", "nigeria", "poland", "russia", "spain", "uk", "us"]
+    }
+    
+    func setupButtons() {
         button1.layer.borderWidth = 1
         button2.layer.borderWidth = 1
         button3.layer.borderWidth = 1
@@ -30,8 +38,11 @@ class ViewController: UIViewController {
         button1.layer.borderColor = UIColor.lightGray.cgColor
         button2.layer.borderColor = UIColor.lightGray.cgColor
         button3.layer.borderColor = UIColor.lightGray.cgColor
-        
-        askQuestion(action: nil)
+    }
+    
+    func addScoreButton() {
+        let showScoreButton = UIBarButtonItem(title: "Show score", style: .plain, target: self, action: #selector(showAlert))
+        navigationItem.rightBarButtonItem = showScoreButton
     }
     
     func askQuestion(action: UIAlertAction!) {
