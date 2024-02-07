@@ -18,20 +18,24 @@ class ViewController: UIViewController, WKNavigationDelegate {
         webView = WKWebView()
         webView.navigationDelegate = self
         view = webView
+        loadIntialWebsite()
+    }
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setupToolbar()
+        observeWebView()
         
+    }
+    
+    func loadIntialWebsite() {
         if let selectedWebsite = selectedWebsite,
             let url = URL(string: "https://" + selectedWebsite) {
             webView.load(URLRequest(url: url))
         }
     }
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        let websiteToLoad = selectedWebsite
-        let url = URL(string: "https://" + (selectedWebsite ?? websites[1]))!
-        webView.load(URLRequest(url: url))
-        webView.allowsBackForwardNavigationGestures = true
-        
+    
+    func setupToolbar() {
         progressView = UIProgressView(progressViewStyle: .default)
         progressView.sizeToFit()
         
@@ -43,7 +47,9 @@ class ViewController: UIViewController, WKNavigationDelegate {
         
         toolbarItems = [back, progressButton, spacer, refresh, forward]
         navigationController?.isToolbarHidden = false
-        
+    }
+    
+    func observeWebView() {
         webView.addObserver(self, forKeyPath: #keyPath(WKWebView.estimatedProgress), options: .new, context: nil)
     }
     
