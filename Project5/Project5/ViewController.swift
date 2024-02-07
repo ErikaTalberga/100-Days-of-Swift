@@ -14,9 +14,16 @@ class ViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        addBarButtton()
+        addWords()
+        startGame()
+    }
+    
+    func addBarButtton() {
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(promtForAnswer))
-        
+    }
+    
+    func addWords() {
         if let startWordsURL = Bundle.main.url(forResource: "start", withExtension: "txt") {
             if let startWords = try? String(contentsOf: startWordsURL) {
                 allWords = startWords.components(separatedBy: "\n")
@@ -25,7 +32,6 @@ class ViewController: UITableViewController {
         if allWords.isEmpty {
             allWords = ["silkworm"]
         }
-        startGame()
     }
     
     func startGame() {
