@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  Project7
+//  Project8
 //
-//  Created by erika.talberga on 08/02/2024.
+//  Created by erika.talberga on 11/02/2024.
 //
 
 import UIKit
@@ -10,19 +10,12 @@ import UIKit
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-    var window: UIWindow?
-    
+
+
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        if let tabBarController = window?.rootViewController as? UITabBarController {
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            if let vc = storyboard.instantiateViewController(withIdentifier: "NavController") as? UINavigationController {
-                vc.tabBarItem = UITabBarItem(tabBarSystemItem: .topRated, tag: 1)
-                tabBarController.viewControllers?.append(vc)
-            }
-        }
+        // Override point for customization after application launch.
         return true
     }
-
 
     // MARK: UISceneSession Lifecycle
 
