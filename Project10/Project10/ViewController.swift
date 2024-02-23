@@ -12,12 +12,12 @@ class ViewController: UICollectionViewController {
 //MARK: - Declarations
     var people = [Person] ()
 
+//    MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addNewPerson))
+        getArrayBack()
     }
-
-    
 }
 
 //MARK: - Collection View datasource and delegates
@@ -53,6 +53,7 @@ extension ViewController {
             person.name = newName
             self?.collectionView.reloadData()
         })
+        self.save()
         present(ac, animated: true)
     }
 }
@@ -78,10 +79,37 @@ extension ViewController: UIImagePickerControllerDelegate, UINavigationControlle
         people.append(person)
         collectionView.reloadData()
         dismiss(animated: true)
+        self.save()
     }
     
     func getDocumentsDirectory() -> URL {
         let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
         return paths[0]
+    }
+}
+
+//MARK: - Reading and writing data
+extension ViewController {
+    func save() {
+        let jsonEncoder = JSONEncoder()
+        if let savedData = try? jsonEncoder.encode(people) {
+            let defaults = UserDefaults.standard
+            defaults.set(savedData, forKey: "people")
+        } else {
+            print("Failed to save people.")
+        }
+    }
+    
+    func getArrayBack() {
+        let defaults = UserDefaults.standard
+        
+        if let savedPeople = defaults.object(forKey: "people") as? Data {
+            let jsonDecoder = JSONDecoder()
+            do {
+                people = try jsonDecoder.decode([Person].self, from: savedPeople)
+            } catch {
+                print("Failed to load people")
+            }
+        }
     }
 }
