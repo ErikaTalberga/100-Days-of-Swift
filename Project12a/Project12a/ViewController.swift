@@ -12,12 +12,18 @@ class ViewController: UICollectionViewController {
 //MARK: - Declarations
     var people = [Person] ()
 
+//MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addNewPerson))
+        let defaults = UserDefaults.standard
+        
+        if let savedPeople = defaults.object(forKey: "people") as? Data {
+            if let decodedPeople = try? NSKeyedUnarchiver.unarchivedObject(ofClasses: [NSArray.self, Person.self], from: savedPeople) as? [Person] {
+                people = decodedPeople
+            }
+        }
     }
-
-    
 }
 
 //MARK: - Collection View datasource and delegates
@@ -53,6 +59,7 @@ extension ViewController {
             person.name = newName
             self?.collectionView.reloadData()
         })
+        self.save()
         present(ac, animated: true)
     }
 }
@@ -78,10 +85,21 @@ extension ViewController: UIImagePickerControllerDelegate, UINavigationControlle
         people.append(person)
         collectionView.reloadData()
         dismiss(animated: true)
+        self.save()
     }
     
     func getDocumentsDirectory() -> URL {
         let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
         return paths[0]
+    }
+}
+
+//MARK: - Writing data
+extension ViewController {
+    func save() {
+        if let savedData = try? NSKeyedArchiver.archivedData(withRootObject: people, requiringSecureCoding: false) {
+            let defaults = UserDefaults.standard
+            defaults.set(savedData, forKey: "people")
+        }
     }
 }
